@@ -8,6 +8,13 @@ namespace MoviesRental.Core.DomainObjects
 {
     public class Entity
     {
+
+        public Entity()
+        {
+            Id = Guid.NewGuid();
+            CreateAt = DateTime.Now;
+
+        }
         public Guid Id { get; protected set; }
         public DateTime CreateAt { get; protected set; }
         public DateTime UpdateAt { get; protected set; }
